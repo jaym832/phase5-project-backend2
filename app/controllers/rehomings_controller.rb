@@ -12,4 +12,20 @@ class RehomingsController < ApplicationController
         head :no_content
 
     end
+
+
+    def update
+        pet=Pet.find_by(id:params[:id])
+        # byebug
+        pet.update!(rehomeParams)
+    end
+
+
+
+    private 
+
+    def rehomeParams
+        params.permit(:name,:animal_type,:breed,:secondary,:age,:gender,:image,:url,:description)
+
+    end
 end

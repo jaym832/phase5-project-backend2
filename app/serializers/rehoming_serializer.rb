@@ -1,5 +1,5 @@
 class RehomingSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id  
   has_one :user
   belongs_to :pet
 

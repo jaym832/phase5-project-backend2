@@ -9,6 +9,8 @@ User.destroy_all
 Favorite.destroy_all
 Pet.destroy_all
 Rehoming.destroy_all
+Message.destroy_all
+Conversation.destroy_all
 
 #adopting a pet
 u1=User.create(username:'jaym832',password: 'pass123',email: 'jjmarin777@gmail.com',role:'client',f_name:'jj',l_name: 'marin',zipcode:'77441')
@@ -19,3 +21,4 @@ a1= Favorite.create(user_id:u1.id,pet_id:p1.id,status:'approved')
 u2=User.create(username:'jaym77',password: 'pass123',email: 'jj@gmail.com',role:'client',f_name:'jay',l_name: 'martin',zipcode:'77564')
 p2= Pet.create(name:'jojo',breed:'terrier',animal_type:'dog',age:'young',description:"1 year old terrier",rehome:true,gender:'Male')
 a2= Rehoming.create(user_id:u2.id,pet_id:p2.id,status:'verified')
+
