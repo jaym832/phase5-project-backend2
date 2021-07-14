@@ -19,7 +19,8 @@ class UsersController < ApplicationController
 
 
      def update
-       user=@current_user
+        user=User.find_by(id:params[:id])
+        # byebug
        if user
         user.update!(userParams)
         # byebug
