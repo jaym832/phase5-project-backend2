@@ -7,7 +7,7 @@ class User < ApplicationRecord
     has_many :pets,through: :rehomings
 
 
-    validates :email, :role , presence: true
+    validates :email, :role ,:zipcode, presence: true
     validates :username, presence: true
 
     validates :username,:email, uniqueness: true 
